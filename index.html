@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Proposta E-commerce Pet Shop</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -65,6 +66,66 @@
   .diff-card{padding:12px;border-radius:8px;background:#f8f9ff;border:1px solid #e8ecff}
   .diff-card .num{font-size:18pt;font-weight:800;color:#667eea;margin-bottom:2px}
   .diff-card p{font-size:9pt;margin:0;color:#555}
+
+  /* ===== MOBILE RESPONSIVE ===== */
+  @media screen and (max-width: 768px) {
+    body { font-size: 10pt; padding: 0; }
+
+    .cover { padding: 40px 20px; min-height: 100vh; }
+    .cover-icon { font-size: 48px; }
+    .cover h1 { font-size: 20pt; }
+    .cover .subtitle { font-size: 11pt; margin-bottom: 20px; }
+    .cover p { font-size: 10pt !important; }
+    .cover-meta { font-size: 9pt; margin-top: 24px; }
+
+    .page { padding: 8px 16px; }
+    h2 { font-size: 14pt; margin: 20px 0 12px; }
+    h3 { font-size: 11pt; margin: 16px 0 8px; }
+
+    /* Tables: horizontal scroll */
+    table { display: block; overflow-x: auto; white-space: nowrap; font-size: 9pt; }
+    th, td { padding: 8px 10px; }
+
+    /* Comparison side-by-side → stacked */
+    .comparison { flex-direction: column; gap: 12px; }
+    .comp-col { padding: 14px; }
+
+    /* Tech grid → single column */
+    .tech-grid { grid-template-columns: 1fr; gap: 8px; }
+
+    /* Diff cards → single column */
+    .diff-cards { grid-template-columns: 1fr; gap: 8px; }
+    .diff-card .num { font-size: 14pt; }
+
+    /* Highlight boxes */
+    .highlight-box { padding: 12px 14px; font-size: 9.5pt; }
+
+    /* Badges */
+    .badge { font-size: 7.5pt; padding: 2px 7px; }
+
+    /* Timeline */
+    .timeline-item { gap: 10px; }
+    .timeline-num { width: 24px; height: 24px; font-size: 8pt; }
+    .timeline-content h4 { font-size: 9.5pt; }
+    .timeline-content p { font-size: 8.5pt; }
+
+    /* Footer */
+    .footer-note { padding: 16px; font-size: 10pt; }
+
+    /* Checklist */
+    .checklist li { font-size: 9.5pt; }
+
+    /* Lists */
+    ul, ol { margin-left: 16px; }
+    li { font-size: 9.5pt; }
+  }
+
+  @media screen and (max-width: 400px) {
+    .cover h1 { font-size: 17pt; }
+    .cover .subtitle { font-size: 10pt; }
+    h2 { font-size: 13pt; }
+    .page { padding: 6px 12px; }
+  }
 </style>
 </head>
 <body>
