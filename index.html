@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Proposta E-commerce Pet Shop</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;color:#1a1a2e;line-height:1.7;background:#fff;font-size:11pt}
+  @page{size:A4;margin:18mm 20mm}
+  @media print{body{-webkit-print-color-adjust:exact;print-color-adjust:exact}.no-break{break-inside:avoid}}
+
+  .cover{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:60px 40px;page-break-after:always}
+  .cover-icon{font-size:72px;margin-bottom:20px}
+  .cover h1{font-size:32pt;font-weight:800;margin-bottom:12px;letter-spacing:-0.5px}
+  .cover .subtitle{font-size:14pt;opacity:0.9;margin-bottom:40px;font-weight:300}
+  .cover-meta{margin-top:40px;font-size:10pt;opacity:0.8;line-height:2}
+  .cover-meta strong{font-weight:600}
+
+  .page{padding:10px 0;page-break-inside:avoid}
+  h2{font-size:16pt;font-weight:700;color:#2d2b55;margin:30px 0 16px;padding-bottom:8px;border-bottom:3px solid #667eea}
+  h3{font-size:12pt;font-weight:700;color:#444;margin:20px 0 10px}
+  p{margin-bottom:10px;text-align:justify}
+  ul,ol{margin:0 0 14px 20px}
+  li{margin-bottom:5px}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:10pt}
+  th{background:#667eea;color:#fff;padding:10px 12px;text-align:left;font-weight:600}
+  td{padding:9px 12px;border-bottom:1px solid #e8e8e8}
+  tr:nth-child(even){background:#f8f9ff}
+  tr:hover{background:#f0f1ff}
+
+  .highlight-box{background:linear-gradient(135deg,#f8f9ff,#eef0ff);border-left:4px solid #667eea;padding:16px 20px;border-radius:0 8px 8px 0;margin:16px 0;font-size:10pt}
+  .highlight-box.green{border-left-color:#51cf66;background:linear-gradient(135deg,#f0fff4,#e6fcf5)}
+  .highlight-box.orange{border-left-color:#ffa94d;background:linear-gradient(135deg,#fff9f0,#fff4e6)}
+
+  .badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:8pt;font-weight:600;margin-right:4px}
+  .badge-green{background:#d3f9d8;color:#2b8a3e}
+  .badge-red{background:#ffe3e3;color:#c92a2a}
+  .badge-blue{background:#d0ebff;color:#1864ab}
+
+  .comparison{display:flex;gap:20px;margin:16px 0}
+  .comp-col{flex:1;padding:16px;border-radius:10px}
+  .comp-col.bad{background:#fff5f5;border:1px solid #ffc9c9}
+  .comp-col.good{background:#f0fff4;border:1px solid #b2f2bb}
+  .comp-col h4{font-size:11pt;margin-bottom:10px}
+
+  .tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+  .tech-card{background:#f8f9ff;border:1px solid #e8ecff;border-radius:8px;padding:12px 14px}
+  .tech-card h4{font-size:10pt;color:#667eea;margin-bottom:4px}
+  .tech-card p{font-size:9pt;margin:0;color:#666}
+
+  .timeline{margin:16px 0}
+  .timeline-item{display:flex;gap:14px;margin-bottom:12px;align-items:flex-start}
+  .timeline-num{width:28px;height:28px;border-radius:50%;background:#667eea;color:#fff;display:flex;align-items:center;justify-content:center;font-size:9pt;font-weight:700;flex-shrink:0}
+  .timeline-content h4{font-size:10pt;margin-bottom:2px}
+  .timeline-content p{font-size:9pt;color:#666;margin:0}
+  .timeline-content .days{font-size:8pt;color:#667eea;font-weight:600}
+
+  .footer-note{text-align:center;margin-top:40px;padding:24px;background:#f8f9ff;border-radius:10px;font-style:italic;color:#555}
+  .checklist li{list-style:none;margin-left:-20px;padding:4px 0}
+  .checklist li::before{content:'☐ ';font-size:12pt}
+
+  .diff-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+  .diff-card{padding:12px;border-radius:8px;background:#f8f9ff;border:1px solid #e8ecff}
+  .diff-card .num{font-size:18pt;font-weight:800;color:#667eea;margin-bottom:2px}
+  .diff-card p{font-size:9pt;margin:0;color:#555}
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<div class="cover">
+  <div class="cover-icon">🐾</div>
+  <h1>Proposta Comercial</h1>
+  <div class="subtitle">Desenvolvimento de Loja Virtual — Pet Shop</div>
+  <p style="max-width:500px;opacity:0.85;font-size:11pt">Sua loja aberta 24 horas, vendendo enquanto você cuida do que mais importa.</p>
+  <div class="cover-meta">
+    <strong>Preparado por:</strong> Gutemberg Amorim — Desenvolvedor Full Stack<br>
+    <strong>Data:</strong> 25 de Maio de 2026<br>
+    <strong>Referência:</strong> Projeto AMMI Fitwear (e-commerce em produção)
+  </div>
+</div>
+
+<!-- SEÇÃO 1 -->
+<div class="page">
+<h2>1. Entendendo o Desafio</h2>
+<p>Hoje, a operação de vendas acontece exclusivamente pelo Instagram. Veja as limitações e o impacto no negócio:</p>
+
+<table>
+  <tr><th>Limitação do Instagram</th><th>Impacto no Negócio</th></tr>
+  <tr><td>Sem catálogo organizado</td><td>Cliente precisa rolar o feed para encontrar produtos</td></tr>
+  <tr><td>Sem carrinho de compras</td><td>Cada pedido exige conversas manuais no direct/WhatsApp</td></tr>
+  <tr><td>Sem controle de estoque</td><td>Risco de vender produto indisponível</td></tr>
+  <tr><td>Sem pagamento integrado</td><td>Transferências manuais, sem comprovação automática</td></tr>
+  <tr><td>Sem dados do cliente</td><td>Impossível criar campanhas segmentadas ou fidelização</td></tr>
+  <tr><td>Sem histórico de pedidos</td><td>Retrabalho para acompanhar entregas e trocas</td></tr>
+  <tr><td>Dependência da plataforma</td><td>Algoritmo decide quem vê seus produtos</td></tr>
+</table>
+
+<div class="highlight-box">
+  <strong>💡 Importante:</strong> Com uma loja própria, você é dona da sua base de clientes, dos dados e do canal de venda. O Instagram continua como vitrine, mas a conversão acontece no seu território.
+</div>
+</div>
+
+<!-- SEÇÃO 2 -->
+<div class="page">
+<h2>2. O Que Vamos Entregar</h2>
+<p>A loja virtual será construída com a <strong>mesma tecnologia e arquitetura</strong> de um e-commerce real já em produção (AMMI Fitwear). Não é template — é um sistema sob medida.</p>
+
+<h3>🏠 2.1 Página Inicial Impactante</h3>
+<ul>
+  <li><strong>Banner rotativo</strong> com promoções e lançamentos</li>
+  <li><strong>Barra de informações</strong> (Frete grátis, parcelamento, trocas)</li>
+  <li><strong>Grid de categorias</strong> com imagens (Ração, Brinquedos, Acessórios, Higiene, etc.)</li>
+  <li><strong>Seção "Mais Vendidos"</strong> — ranqueados por vendas reais</li>
+  <li><strong>Prova Social</strong> — fotos e depoimentos de clientes</li>
+  <li><strong>Newsletter</strong> — captura de e-mails para promoções</li>
+  <li><strong>Botão flutuante do WhatsApp</strong></li>
+</ul>
+
+<h3>🛍️ 2.2 Catálogo de Produtos</h3>
+<ul>
+  <li>Filtros por <strong>categoria, faixa de preço</strong> (slider interativo) e <strong>ordenação</strong></li>
+  <li><strong>Busca por texto</strong> (nome e descrição)</li>
+  <li>Página de detalhes: galeria de imagens, variações, preço/desconto, avaliações com estrelas</li>
+  <li>Badges automáticos: "Novo", "Destaque", "Esgotado"</li>
+  <li><strong>Produtos relacionados</strong> — sugestões inteligentes</li>
+</ul>
+
+<h3>🛒 2.3 Carrinho e Favoritos</h3>
+<ul>
+  <li>Carrinho persistente com contagem no header e cálculos automáticos</li>
+  <li>Lista de Favoritos (❤️) para salvar produtos</li>
+  <li>Toast de confirmação ao adicionar produto</li>
+</ul>
+
+<h3>💳 2.4 Checkout e Pagamentos Reais</h3>
+<p>Fluxo guiado: Revisão → Endereço (busca por CEP) → Pagamento → Confirmação</p>
+<ul>
+  <li>✅ <strong>PIX</strong> — QR Code com confirmação automática via webhook</li>
+  <li>✅ <strong>Cartão de Crédito</strong> — parcelamento em até 12x</li>
+  <li>✅ <strong>Cartão de Débito</strong></li>
+</ul>
+
+<div class="highlight-box green">
+  <strong>💡 Cupons de Desconto:</strong> Sistema completo com desconto por porcentagem ou valor fixo, validade, limite de usos, valor mínimo e cupons de primeira compra. Ex: "Use o cupom <strong>PETLOVER10</strong> e ganhe 10% off!"
+</div>
+
+<h3>📦 2.5 Frete Dinâmico</h3>
+<ul>
+  <li>Integração com <strong>Melhor Envio</strong> — cotação automática por CEP</li>
+  <li>Múltiplas opções (Correios, Jadlog) com prazo e preço</li>
+  <li>Possibilidade de <strong>frete grátis</strong> acima de determinado valor</li>
+</ul>
+</div>
+
+<!-- SEÇÃO 2 (continuação) -->
+<div class="page">
+<h3>👤 2.6 Área do Cliente</h3>
+<ul>
+  <li>Dados pessoais, múltiplos endereços, histórico de pedidos com status em tempo real</li>
+  <li><strong>Login com Google</strong> — cadastro em 1 clique</li>
+  <li>Recuperação de senha por e-mail</li>
+  <li>Configurações de notificações</li>
+</ul>
+
+<h3>🔧 2.7 Painel Administrativo</h3>
+<p>O diferencial que elimina a dependência de planilhas e anotações:</p>
+<table>
+  <tr><th>Funcionalidade</th><th>O que faz</th></tr>
+  <tr><td><strong>Dashboard</strong></td><td>Receita total, pedidos, novos clientes, gráficos</td></tr>
+  <tr><td><strong>Gestão de Produtos</strong></td><td>Criar, editar, ativar/desativar com fotos</td></tr>
+  <tr><td><strong>Gestão de Estoque</strong></td><td>Controle por variação, alertas de estoque baixo, histórico</td></tr>
+  <tr><td><strong>Gestão de Pedidos</strong></td><td>Status: Pendente → Pago → Preparando → Enviado → Entregue</td></tr>
+  <tr><td><strong>Detalhes do Pedido</strong></td><td>Dados completos: cliente, endereço, itens, pagamento</td></tr>
+  <tr><td><strong>Gestão de Cupons</strong></td><td>Criar/editar cupons com regras avançadas</td></tr>
+  <tr><td><strong>Gestão de Usuários</strong></td><td>Clientes cadastrados, ativar/desativar contas</td></tr>
+  <tr><td><strong>Upload de Mídia</strong></td><td>Galeria de imagens na nuvem (Cloudinary)</td></tr>
+  <tr><td><strong>Relatórios</strong></td><td>Análises de vendas, produtos e clientes</td></tr>
+</table>
+
+<div class="highlight-box">
+  <strong>🔒 Segurança:</strong> Painel protegido por autenticação e controle de acesso por role (admin vs. cliente). Apenas você terá acesso.
+</div>
+
+<h3>📄 2.8 Páginas Institucionais</h3>
+<ul>
+  <li><strong>Sobre Nós</strong> — história da marca</li>
+  <li><strong>Política de Trocas</strong> — regras claras</li>
+  <li><strong>Termos e Privacidade</strong> — conformidade com LGPD</li>
+</ul>
+
+<h3>🛡️ 2.9 Segurança e Performance</h3>
+<ul>
+  <li>JWT (tokens seguros), senhas com bcrypt, headers com Helmet</li>
+  <li>Proteção CORS, validação em todas as rotas</li>
+  <li><strong>Recálculo de preços no servidor</strong> (antifraude)</li>
+</ul>
+</div>
+
+<!-- SEÇÃO 3 -->
+<div class="page">
+<h2>3. Instagram vs. Loja Própria</h2>
+
+<div class="comparison">
+  <div class="comp-col bad">
+    <h4>🔴 Hoje: Instagram</h4>
+    <ol style="font-size:9.5pt">
+      <li>Pedido chega via Direct</li>
+      <li>Combinar pagamento manual</li>
+      <li>Anotar em planilha/caderno</li>
+      <li>Sem controle de estoque</li>
+      <li>Sem dados do cliente</li>
+    </ol>
+  </div>
+  <div class="comp-col good">
+    <h4>🟢 Com a Loja Própria</h4>
+    <ol style="font-size:9.5pt">
+      <li>Cliente navega o catálogo</li>
+      <li>Adiciona ao carrinho</li>
+      <li>Paga com PIX/Cartão automaticamente</li>
+      <li>Pedido registrado + estoque atualizado</li>
+      <li>Você só despacha 📦</li>
+    </ol>
+  </div>
+</div>
+
+<table>
+  <tr><th>Aspecto</th><th>Instagram</th><th>Loja Própria</th></tr>
+  <tr><td>Catálogo organizado</td><td><span class="badge badge-red">❌ Feed desordenado</span></td><td><span class="badge badge-green">✅ Categorias + filtros</span></td></tr>
+  <tr><td>Carrinho de compras</td><td><span class="badge badge-red">❌ Não existe</span></td><td><span class="badge badge-green">✅ Cálculos automáticos</span></td></tr>
+  <tr><td>Pagamento automático</td><td><span class="badge badge-red">❌ PIX manual</span></td><td><span class="badge badge-green">✅ PIX + Cartão auto</span></td></tr>
+  <tr><td>Controle de estoque</td><td><span class="badge badge-red">❌ Manual</span></td><td><span class="badge badge-green">✅ Automático c/ alertas</span></td></tr>
+  <tr><td>Histórico de vendas</td><td><span class="badge badge-red">❌ Conversas no direct</span></td><td><span class="badge badge-green">✅ Painel com relatórios</span></td></tr>
+  <tr><td>Cupons de desconto</td><td><span class="badge badge-red">❌ Impossível</span></td><td><span class="badge badge-green">✅ Sistema completo</span></td></tr>
+  <tr><td>Base de clientes</td><td><span class="badge badge-red">❌ Seguidores (não seus)</span></td><td><span class="badge badge-green">✅ Cadastro próprio</span></td></tr>
+  <tr><td>Funcionamento 24h</td><td><span class="badge badge-red">⚠️ Depende de responder</span></td><td><span class="badge badge-green">✅ Vende sozinha</span></td></tr>
+  <tr><td>Frete</td><td><span class="badge badge-red">❌ Calculado manualmente</span></td><td><span class="badge badge-green">✅ Cotação por CEP</span></td></tr>
+</table>
+</div>
+
+<!-- SEÇÃO 4 -->
+<div class="page">
+<h2>4. Tecnologias Utilizadas</h2>
+<p>A mesma stack profissional, <strong>testada e em produção</strong>, do projeto AMMI Fitwear:</p>
+
+<div class="tech-grid">
+  <div class="tech-card"><h4>⚛️ React 18</h4><p>Interface moderna e reativa do cliente</p></div>
+  <div class="tech-card"><h4>⚡ Vite</h4><p>Build ultrarrápido, desenvolvimento ágil</p></div>
+  <div class="tech-card"><h4>🟢 Node.js + Express</h4><p>Servidor robusto e escalável</p></div>
+  <div class="tech-card"><h4>🍃 MongoDB Atlas</h4><p>Banco de dados na nuvem, flexível</p></div>
+  <div class="tech-card"><h4>💳 InfinitePay</h4><p>Pagamentos reais: PIX e Cartão</p></div>
+  <div class="tech-card"><h4>☁️ Cloudinary</h4><p>Armazenamento de imagens na nuvem</p></div>
+  <div class="tech-card"><h4>📦 Melhor Envio</h4><p>Cálculo de frete em tempo real</p></div>
+  <div class="tech-card"><h4>🔐 JWT + Google Auth</h4><p>Login seguro e login social</p></div>
+</div>
+
+<h3>Hospedagem</h3>
+<table>
+  <tr><th>Serviço</th><th>Uso</th></tr>
+  <tr><td>▲ Vercel</td><td>Frontend (interface do site)</td></tr>
+  <tr><td>🖥️ Render / Railway</td><td>Backend (servidor/API)</td></tr>
+  <tr><td>🗄️ MongoDB Atlas</td><td>Banco de dados na nuvem</td></tr>
+</table>
+</div>
+
+<!-- SEÇÃO 5 -->
+<div class="page">
+<h2>5. Cronograma Sugerido</h2>
+
+<div class="timeline">
+  <div class="timeline-item"><div class="timeline-num">1</div><div class="timeline-content"><h4>Planejamento</h4><p>Reunião de briefing, categorias, identidade visual, conteúdo</p><div class="days">3 – 5 dias</div></div></div>
+  <div class="timeline-item"><div class="timeline-num">2</div><div class="timeline-content"><h4>Design & Frontend</h4><p>Adaptação do design ao universo pet, cores, logo, banners, responsividade</p><div class="days">7 – 10 dias</div></div></div>
+  <div class="timeline-item"><div class="timeline-num">3</div><div class="timeline-content"><h4>Backend & Banco de Dados</h4><p>Servidor, modelos de dados, APIs, autenticação</p><div class="days">5 – 7 dias</div></div></div>
+  <div class="timeline-item"><div class="timeline-num">4</div><div class="timeline-content"><h4>Integrações</h4><p>Pagamento (InfinitePay), frete (Melhor Envio), imagens (Cloudinary)</p><div class="days">3 – 5 dias</div></div></div>
+  <div class="timeline-item"><div class="timeline-num">5</div><div class="timeline-content"><h4>Painel Administrativo</h4><p>Dashboard, gestão de produtos, estoque, pedidos, cupons</p><div class="days">5 – 7 dias</div></div></div>
+  <div class="timeline-item"><div class="timeline-num">6</div><div class="timeline-content"><h4>Testes & Ajustes</h4><p>Testes de fluxo completo, correções, otimizações</p><div class="days">3 – 5 dias</div></div></div>
+  <div class="timeline-item"><div class="timeline-num">7</div><div class="timeline-content"><h4>Deploy & Lançamento</h4><p>Publicação, domínio, SSL, treinamento de uso do painel</p><div class="days">2 – 3 dias</div></div></div>
+</div>
+
+<div class="highlight-box orange">
+  <strong>⏱️ Prazo total estimado: 4 a 6 semanas.</strong> Pode variar conforme complexidade visual e velocidade no fornecimento de conteúdo (fotos, textos, logo).
+</div>
+</div>
+
+<!-- SEÇÃO 6 -->
+<div class="page">
+<h2>6. O Que Eu Preciso de Você</h2>
+<ul class="checklist">
+  <li><strong>Logo e identidade visual</strong> (cores, fontes) — ou posso sugerir</li>
+  <li><strong>Fotos dos produtos</strong> em boa qualidade</li>
+  <li><strong>Lista de categorias</strong> (Ex: Ração, Petiscos, Brinquedos, Camas, Roupas, Higiene)</li>
+  <li><strong>Textos institucionais</strong> (Sobre, Política de Trocas) — ou posso redigir</li>
+  <li><strong>Dados para pagamento</strong> (conta InfinitePay ou gateway escolhido)</li>
+  <li><strong>CEP de origem</strong> para configuração do frete</li>
+  <li><strong>Domínio desejado</strong> (Ex: www.sualojanome.com.br)</li>
+</ul>
+
+<h2>7. Diferenciais Desta Proposta</h2>
+<div class="diff-cards">
+  <div class="diff-card"><div class="num">01</div><p><strong>Não é template genérico</strong> — sistema construído do zero</p></div>
+  <div class="diff-card"><div class="num">02</div><p><strong>Comprovado em produção</strong> — mesma tech do AMMI Fitwear</p></div>
+  <div class="diff-card"><div class="num">03</div><p><strong>Controle total</strong> — painel admin completo</p></div>
+  <div class="diff-card"><div class="num">04</div><p><strong>Escalável</strong> — pode crescer (blog, fidelidade, etc.)</p></div>
+  <div class="diff-card"><div class="num">05</div><p><strong>Código seu</strong> — você é dona do código e dos dados</p></div>
+  <div class="diff-card"><div class="num">06</div><p><strong>Pagamentos reais</strong> — PIX e Cartão funcionando</p></div>
+  <div class="diff-card"><div class="num">07</div><p><strong>Mobile-first</strong> — design perfeito no celular</p></div>
+  <div class="diff-card"><div class="num">08</div><p><strong>Suporte contínuo</strong> — manutenção pós-lançamento</p></div>
+</div>
+</div>
+
+<!-- SEÇÃO 8 -->
+<div class="page">
+<h2>8. Próximos Passos</h2>
+<div class="timeline">
+  <div class="timeline-item"><div class="timeline-num">1</div><div class="timeline-content"><h4>Aprovação da proposta</h4><p>Alinhamento de escopo e expectativas</p></div></div>
+  <div class="timeline-item"><div class="timeline-num">2</div><div class="timeline-content"><h4>Briefing detalhado</h4><p>Reunião para definir categorias, visual e prioridades</p></div></div>
+  <div class="timeline-item"><div class="timeline-num">3</div><div class="timeline-content"><h4>Acordo comercial</h4><p>Valores, forma de pagamento e contrato</p></div></div>
+  <div class="timeline-item"><div class="timeline-num">4</div><div class="timeline-content"><h4>Início do desenvolvimento 🚀</h4><p>Mãos à obra!</p></div></div>
+</div>
+
+<div class="footer-note">
+  "Sua loja aberta 24 horas, vendendo enquanto você cuida do que mais importa." 🐾
+  <br><br>
+  <strong>Gutemberg Amorim</strong><br>
+  Desenvolvedor Full Stack
+</div>
+</div>
+
+</body>
+</html>
